@@ -6,10 +6,13 @@
     --ow: #e0dedf;
     --w: #fff;
     --bg: #2F392B;
+    --logo: #5CAE53;
+    --dlogo: #437e3d;
 
     /* FONT STYLES */
-    --ftfam: ;
-    --ftsize: 2rem;
+    --ftfam: 'Ubuntu Mono', monospace;
+    --ftfam2: 'Bebas Neue', sans-serif;
+    --ftfam3: 'Inconsolata', monospace;
 }
 
 * {
@@ -20,8 +23,66 @@
 
 body {
     margin: 0;
+    background-color: var(--ob);
 }
 
 header {
     margin: 0;
+}
+
+.navi {
+    display: flex;
+    padding: 2rem;
+    padding-left: 6rem;
+    background-color: var(--b);
+}
+
+.logo {
+    margin-right: 1rem; 
+    cursor: pointer;
+}
+
+.directory a {
+    padding: 1rem;
+    color: var(--logo);
+    font-family: var(--ftfam);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.directory a:hover {
+    color: var(--ow);
+}
+
+.btn {
+    font-family: var(--ftfam);
+    margin-right: 1rem;
+}
+
+.register {
+    padding-right: 6rem;
+}
+
+.about,
+.services {
+    background-color: var(--dlogo);
+    color: var(--w);
+    font-family: var(--ftfam3);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+.left {
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.right {
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
 }
