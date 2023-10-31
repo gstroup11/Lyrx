@@ -87,3 +87,11 @@ h1 {
     margin-bottom: 2.5rem;
     font-size: 1.5rem;
 }
+
+footer {
+    background-color: var(--b);
+    color: var(--w);
+    min-height: 20vh;
+    padding-top: 6rem;
+    font-family: var(--ftfam3);
+}
