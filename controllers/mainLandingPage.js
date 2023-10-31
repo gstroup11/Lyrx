@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User } = require('../models/User');
 
 // renders home landing page
 router.get('/', async (req, res) => {
@@ -27,3 +27,5 @@ router.get('/signup', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
