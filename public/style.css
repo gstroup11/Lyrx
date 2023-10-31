@@ -158,6 +158,12 @@ input {
     color: var(--w);
 }
 
+.topSongs {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+/* FOOTER STYLE */
 footer {
     background-color: var(--b);
     color: var(--w);
