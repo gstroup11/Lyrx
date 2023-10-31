@@ -51,6 +51,9 @@ header {
 
 .navi {
     display: flex;
+    position: sticky;
+    top: calc(0px);
+    z-index: 6;
     padding: 2.7rem;
     padding-left: 6rem;
     background-color: var(--b);
