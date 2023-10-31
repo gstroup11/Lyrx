@@ -51,7 +51,7 @@ header {
 
 .navi {
     display: flex;
-    padding: 2rem;
+    padding: 2.7rem;
     padding-left: 6rem;
     background-color: var(--b);
 }
@@ -161,6 +161,12 @@ input {
 .topSongs {
     margin-top: 10rem;
     margin-bottom: 10rem;
+}
+
+/* RESULT PAGE STYLE */
+.search-top {
+    margin-top: -1rem;
+    margin-bottom: -3.4rem;
 }
 
 /* FOOTER STYLE */
