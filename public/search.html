@@ -72,10 +72,20 @@
     </div>
 
     <!-- Search Section -->
-    <div class="p-5 align-items-center justify-content-center text-center search">
-        <form id="search-form">
-            <input type="text" id="search-lyrics" size="100px" placeholder="Search for lyric">
+    <div class="pt-3 align-items-center justify-content-center text-center search">
+            <input type="text" id="search-lyrics" size="150px" placeholder="Search for lyric">
             <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Search Filter -->
+    <div class="pb-5 align-items-center justify-content-center text-center filter">
+        <form class="align-items-center justify-content-center text-center filter-form" action="/action_page.php">
+            <input type="radio" id="f1" name="filter" value="1">
+            <label for="f1">By Lyric</label><br>
+            <input type="radio" id="f2" name="filter" value="2">
+            <label for="f2">By Artist</label><br>  
+            <input type="radio" id="f3" name="filter" value="3">
+            <label for="f3">By Album</label><br><br>
         </form>
     </div>
 </body>
