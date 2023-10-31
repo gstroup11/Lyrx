@@ -44,7 +44,7 @@ header {
 
 .directory a {
     padding: 1rem;
-    color: var(--logo);
+    color: var(--ow);
     font-family: var(--ftfam);
     font-size: 1.2rem;
     font-weight: bold;
@@ -53,12 +53,13 @@ header {
 }
 
 .directory a:hover {
-    color: var(--ow);
+    color: var(--logo);
 }
 
 .btn {
     font-family: var(--ftfam);
     margin-right: 1rem;
+    font-weight: bold;
 }
 
 .register {
