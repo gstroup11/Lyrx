@@ -4,7 +4,7 @@ const { User } = require('../models/User');
 // renders home landing page
 router.get('/', async (req, res) => {
   try {
-    res.render('landingPage');
+    res.render('home');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -26,6 +26,14 @@ router.get('/signup', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/search', async (req, res) => {
+  try {
+    res.render('search');
+  }  catch (err) {
+    res.status(500).json(err);
+  }   
 });
 
 module.exports = router;
