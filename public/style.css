@@ -42,6 +42,7 @@
 body {
     margin: 0;
     background-color: var(--ob);
+    min-height: auto;
 }
 
 header {
@@ -117,6 +118,30 @@ h1 {
 }
 
 .searchPage-btn:hover {
+    color: var(--logo);
+}
+
+/* SEARCH PAGE STYLE */
+.search {
+    min-height: 100vh;
+}
+
+input {
+    line-height: 2.5rem;
+}
+
+::placeholder {
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+#search-btn {
+    padding: 0.5rem;
+    background-color: var(--ob);
+    color: var(--w);
+}
+
+#search-btn:hover {
     color: var(--logo);
 }
 
