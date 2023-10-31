@@ -169,6 +169,11 @@ input {
     margin-bottom: -3.4rem;
 }
 
+.lyrics {
+    margin-left: 6rem;
+    margin-top: 5rem;
+}
+
 /* FOOTER STYLE */
 footer {
     background-color: var(--b);
