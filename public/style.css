@@ -150,7 +150,7 @@ input {
     color: var(--logo);
 }
 
-.filter-form {
+/* .filter-form {
     display: flex;
     align-items: center;
 }
@@ -160,7 +160,7 @@ input {
     padding-left: 0.5rem;
     font-family: var(--ftfam);
     color: var(--w);
-}
+} */
 
 .topSongs {
     margin-top: 10rem;
@@ -211,6 +211,45 @@ h2 {
     position: relative;
     top: 1rem;
     left: 10rem;
+}
+
+#player {
+    /* overflow: hidden; */
+    transition: all .5s ease-in-out;
+}
+
+.progressbar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    margin: 6% auto;
+    border-radius: 10px;
+}
+
+.currentTime, .totalTime {
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    margin-top: -2px;
+}
+
+.currentTime {
+    left: 7rem;
+}
+
+.totalTime {
+    right: 7rem;
+}
+
+.bar {
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 2px;
+    background-color: var(--logo);
+}
+
+.controls {
+    justify-content: space-between;
 }
 
 .lyrics {
