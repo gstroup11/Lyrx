@@ -1,31 +1,28 @@
 const express = require('express');
 const router = express.Router();
-const musixmatchAPI = require('../../public/js/musixmatchAPI');
+const { createApiClient } = require('../../public/js/lyricsAPI'); // Adjust the import path
 
+// Define a route for searching lyrics
 router.get('/search-lyrics', async (req, res) => {
-    const { query } = req.query; // Get the search query from the request
+  const { term, artist, format } = req.query;
 
-    if (!query) {
-        return res.status(400).json({ error: 'Missing search query' });
-    }
+  try {
+    const apiClient = createApiClient();
+    const response = await apiClient.get('', {
+      params: {
+        term,
+        artist,
+        format,
+      },
+    });
 
-    try {
-        // Call the searchSong function to make the API request
-        const searchResult = await musixmatchAPI.searchSong(query);
-        
-        if (searchResult.message.header.status_code === 404) {
-            return res.status(404).json({ error: 'No results found' });
-        }
+    const result = response.data;
 
-        // If you want to extract and return the search results:
-        const searchResults = searchResult.message.body.track_list;
-        res.json(searchResults);
-
-    } catch (error) {
-        console.error('Error searching for songs:', error);
-        res.status(500).json({ error: 'Failed to search for songs' });
-    }
+    // Process and return the result as needed
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({ error: 'Error searching lyrics' });
+  }
 });
-
 
 module.exports = router;
