@@ -218,12 +218,31 @@ h2 {
     transition: all .5s ease-in-out;
 }
 
-.progressbar {
+.player-process {
+    height: 6px;
+    width: 90%;
+    margin: 40px 20px 35px;
     position: relative;
-    height: 5px;
+    cursor: pointer;
+}
+
+.controls {
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+    transition: all 0.3 ease-in;
+}
+
+.controls:hover {
+    filter: brightness(40%);
+}
+
+.progressbar {
+    height: 100%;
     width: 100%;
-    margin: 6% auto;
-    border-radius: 10px;
+    transition: all .5s linear;
+    border-radius: 2px;
+    background-color: var(--logo);
 }
 
 .currentTime, .totalTime {
@@ -235,21 +254,12 @@ h2 {
 
 .currentTime {
     left: 7rem;
+    top: -0.2rem;
 }
 
 .totalTime {
     right: 7rem;
-}
-
-.bar {
-    width: 100%;
-    height: 0.3rem;
-    border-radius: 2px;
-    background-color: var(--logo);
-}
-
-.controls {
-    justify-content: space-between;
+    top: -0.2rem;
 }
 
 .lyrics {
