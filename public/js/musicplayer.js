@@ -39,4 +39,33 @@
 //     }
 // }
 
-$('')
+// Handle the search button click
+document.getElementById("search-btn").addEventListener("click", function () {
+    const searchTerm = document.getElementById("search-lyrics").value;
+    // Call a function to search for songs based on the search term
+    searchSongs(searchTerm);
+});
+
+function searchSongs(searchTerm) {
+    // Perform a search using your ORM or API
+    // Update the view with the search results
+}
+
+// Function to play a song
+function playSong() {
+    // Get the song details and URL from the model
+    // Update the view to display the song details and play the audio
+}
+
+// Update the UI with song details
+function updateUI(song) {
+    // Update the audio player source
+    const audioPlayer = document.querySelector("audio");
+    audioPlayer.src = song.url;
+}
+
+// Function to reset the UI
+function resetUI() {
+    // Clear audio source and reset the progress bar
+    document.querySelector("audio").src = "";
+}
