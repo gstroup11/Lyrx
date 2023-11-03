@@ -24,6 +24,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- JQuery UI -->
+    <link 
+    rel="stylesheet" 
+    href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
     <!-- Google Fonts used -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,7 +98,7 @@
                 <div class="player-process">
                     <div class="d-flex flex-row progressbar">
                         <div class="controls">
-                            <div class="play"><i class="fas fa-play"></i></div>
+                            <div class="play" onclick="playSong(this)"><i class="fas fa-play"></i></div>
                         </div> 
                         <div class="currentTime">0:00</div>
                         <div class="totalTime">0:00</div>
@@ -113,7 +119,9 @@
  
 </body>
 
-<!-- <script src="./script.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="./js/musicplayer.js"></script>
 
 <footer class="text-center">
 <p>@ Powered by BST</p>
