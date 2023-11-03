@@ -42,7 +42,9 @@
 body {
     margin: 0;
     background-color: var(--ob);
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -51,9 +53,9 @@ header {
 
 .navi {
     display: flex;
-    position: sticky; 
-    top: calc(0px); 
-    z-index: 6; 
+    position: sticky;
+    top: calc(0px);
+    z-index: 6;
     padding: 2.7rem;
     padding-left: 6rem;
     background-color: var(--b);
@@ -168,7 +170,7 @@ input {
 }
 
 /* RESULT PAGE STYLE */
- .search-top {
+.search-top {
     margin-top: -1rem;
     margin-bottom: -3.4rem;
 }
@@ -265,7 +267,7 @@ h2 {
 .lyrics {
     margin-left: 6rem;
     margin-top: 1rem;
-} 
+}
 
 /* FOOTER STYLE */
 footer {
@@ -274,4 +276,5 @@ footer {
     min-height: 20vh;
     padding-top: 6rem;
     font-family: var(--ftfam3);
+    margin-top: auto;
 }
