@@ -42,7 +42,9 @@
 body {
     margin: 0;
     background-color: var(--ob);
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -274,4 +276,5 @@ footer {
     min-height: 20vh;
     padding-top: 6rem;
     font-family: var(--ftfam3);
+    margin-top: auto;
 }

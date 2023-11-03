@@ -36,4 +36,20 @@ router.get('/search', async (req, res) => {
   }   
 });
 
+router.get('/contact', async (req, res) => {
+  try {
+    res.render('contact');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/home', async (req, res) => {
+  try {
+    res.render('home');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

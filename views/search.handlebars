@@ -1,27 +1,41 @@
-<!-- Search Section -->
-<div class="pt-3 align-items-center justify-content-center text-center search">
-        <input type="text" id="search-lyrics" size="150px" placeholder="Enter Song Name">
-        <input type="text" id="search-artist" size="150px" placeholder="Enter Artist">
-        <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+<!-- Navigation Bar -->
+<div class="d-flex justify-content-between navi">
+    <div class="directory d-flex">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
+        </div>
+
+        <nav>
+            <!-- Homepage -->
+            <a href="/home"> HOME </a>
+
+            <!-- About -->
+            <a href="#about"> ABOUT </a>
+
+            <!-- Contact Information -->
+            <a href="/contact"> CONTACT </a>
+        </nav>
+    </div>
+    
+    <!-- Account -->
+    <div class="register">
+        <button type="button" class="m-r-3 btn btn-outline-success">
+            <a href="/signup">SIGNUP</a>
+        </button>
+        <button type="button" class="btn btn-success">
+            <a href="/login">LOGIN</a>
+        </button>
+    </div>
 </div>
 
-<!-- Search Filter -->
-{{!-- <div class="pb-5 align-items-center justify-content-center text-center filter">
-    <form class="align-items-center justify-content-center text-center filter-form" action="/action_page.php">
-        <input type="radio" id="f1" name="filter" value="1">
-        <label for="f1">By Lyric</label><br>
-        <input type="radio" id="f2" name="filter" value="2">
-        <label for="f2">By Artist</label><br>  
-        <input type="radio" id="f3" name="filter" value="3">
-        <label for="f3">By Album</label><br><br>
-    </form>
-</div> --}}
-
-<div id="lyrics-display"></div>
-
-<!-- Top Songs -->
-<div class="pb-5 align-items-center justify-content-center text-center topSongs">
-    <!-- JS add in top songs listing -->
+<!-- Search Section -->
+<div class="pt-3 align-items-center justify-content-center text-center search">
+  <form id="search-form">
+    <input type="text" id="search-input" size="150px" placeholder="Artist - Song ">
+    <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+  </form>
 </div>
 
 <script src="/js/searchFunction.js"></script>
