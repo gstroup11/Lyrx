@@ -22,7 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = url;
     } else {
       // Handle the case where input is not in the expected format
-      alert("Please enter the input in the format 'Artist and Song'.");
+      alert("Please enter the input in the format 'Artist - Song'.");
     }
   });
+
+  // Extract query parameters from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const artist = urlParams.get("artist");
+  const term = urlParams.get("term");
+
+  // Use Handlebars to render the values
+  const artistPlaceholder = document.getElementById("artist-placeholder");
+  const termPlaceholder = document.getElementById("term-placeholder");
+
+  if (artist && term) {
+    artistPlaceholder.textContent = artist;
+    termPlaceholder.textContent = term;
+  }
 });

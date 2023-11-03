@@ -1,8 +1,44 @@
+<!-- Navigation Bar -->
+<div class="d-flex justify-content-between navi">
+    <div class="directory d-flex">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
+        </div>
+
+        <nav>
+            <!-- Homepage -->
+            <a href="/home"> HOME </a>
+
+            <!-- About -->
+            <a href="#about"> ABOUT </a>
+
+            <!-- Contact Information -->
+            <a href="#contact"> CONTACT </a>
+        </nav>
+    </div>
+
+    <!-- Search Section -->
+    <div class="align-items-center justify-content-center text-center search-top">
+        <form id="search-form">
+            <input type="text" id="search-input" size="100px" placeholder="Artist - Song ">
+            <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+
+    <!-- Account -->
+    <div class="register">
+        <button type="button" class="m-r-3 btn btn-outline-success">SIGNUP</button>
+        <button type="button" class="btn btn-success">LOGIN</button>
+    </div>
+</div>
+
 <!-- Song Cover Info -->
 <div class="box">
     <div class="songTitle">
-        <h2>TITLE</h2>
-        <p class="artist">ARTIST</p>
+        <span id="term-placeholder"></span>
+        <span id="artist-placeholder" class="artist"></span>
 
         <!-- Music Player -->
         <div id="player">
@@ -27,9 +63,10 @@
     
     <!-- Song Cover Image -->
     <div class=" songCover">
-        <img class="cover" src="images/vinyl.jpg" alt="song or album cover image"/>
+        <img class="cover" src="/images/vinyl.jpg" alt="song or album cover image"/>
     </div>
 </div>
+
 <div id="result-link" class="pb-5 align-items-center justify-content-center text-center lyrics">
   {{#if firstResult}}
     <a href="{{firstResult.song-link}}" target="_blank">See Song's Information</a>
@@ -39,5 +76,4 @@
 </div>
 
 <script src="/js/searchFunction.js"></script>
-
-<script src="./js/musicplayer.js"></script>
+<script src="/js/musicplayer.js"></script>
