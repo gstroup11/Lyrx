@@ -39,23 +39,23 @@
 //     }
 // }
 
-// Handle the search button click
-document.getElementById("search-btn").addEventListener("click", function () {
-    const searchTerm = document.getElementById("search-lyrics").value;
-    searchSongs(searchTerm);
-});
+// // Handle the search button click
+// document.getElementById("search-btn").addEventListener("click", function () {
+//     const searchTerm = document.getElementById("search-lyrics").value;
+//     searchSongs(searchTerm);
+// });
 
-// Function to play a song
-function playSong() {
-}
+// // Function to play a song
+// function playSong() {
+// }
 
-// Update the UI with song details
-function updateUI(song) {
-    const audioPlayer = document.querySelector("audio");
-    audioPlayer.src = song.url;
-}
+// // Update the UI with song details
+// function updateUI(song) {
+//     const audioPlayer = document.querySelector("audio");
+//     audioPlayer.src = song.url;
+// }
 
-// Function to reset the UI
-function resetUI() {
-    document.querySelector("audio").src = "";
-}
+// // Function to reset the UI
+// function resetUI() {
+//     document.querySelector("audio").src = "";
+// }

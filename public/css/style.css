@@ -215,8 +215,8 @@ h2 {
     left: 10rem;
 }
 
-#player {
-    /* overflow: hidden; */
+/* #player {
+    overflow: hidden;
     transition: all .5s ease-in-out;
 }
 
@@ -262,7 +262,7 @@ h2 {
 .totalTime {
     right: 7rem;
     top: -0.2rem;
-}
+} */
 
 .lyrics {
     margin-left: 6rem;
