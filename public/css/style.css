@@ -269,6 +269,55 @@ h2 {
     margin-top: 1rem;
 }
 
+/* Contact page */
+.contact-info {
+    background-color: var(--bg);
+    color: var(--ow);
+    font-family: var(--ftfam);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Sign Up Page */
+
+.signup-form {
+    max-width: 300px; /* Adjust this as needed */
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ow);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: var(--logo); /* Use your color variables */
+    color: var(--w); /* Use your color variables */
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Login Form */
+.login-form {
+    max-width: 300px; /* Adjust this as needed */
+    margin: 0 auto;
+}
+
 /* FOOTER STYLE */
 footer {
     background-color: var(--b);
