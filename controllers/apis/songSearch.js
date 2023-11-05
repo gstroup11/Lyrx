@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const { createApiClient } = require('../../public/js/lyricsAPI'); // Adjust the import path
+const withAuth = require('../../utils/auth');
 
 // Define a route for searching lyrics
-router.get("/result", async (req, res) => {
+router.get("/result", withAuth, async (req, res) => {
   const { term, artist, format } = req.query;
 
   try {
