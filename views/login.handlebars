@@ -1,13 +1,50 @@
+<!-- Navigation Bar -->
+<div class="d-flex justify-content-between navi">
+    <div class="directory d-flex">
 
-<body>
-    <h1>{{pageTitle}}</h1>
-    <form>
+        <!-- Logo -->
+        <div class="logo">
+            <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
+        </div>
+
+        <nav>
+            <!-- Homepage -->
+            <a href="/home"> HOME </a>
+
+            <!-- About -->
+            {{!-- <a href="#about"> ABOUT </a> --}}
+
+            <!-- Contact Information -->
+            <a href="/contact"> CONTACT </a>
+        </nav>
+    </div>
+
+    <!-- Title Logo -->
+    <div class="title-logo">
+        <img width="90" height="30" src="/images/lyrx-logo-bold.png" alt="Lyrx title logo" />
+    </div>
+
+    <!-- Account -->
+    <div class="register">
+        <button type="button" class="m-r-3 btn btn-outline-success">
+            <a href="/signup">SIGNUP</a>
+        </button>
+    </div>
+</div>
+<h1>{{pageTitle}}</h1>
+
+<div class="login-form">
+    <form class="unique-login-form">
         <label for="email_or_username">Email or Username:</label>
         <input type="text" id="email_or_username" name="email_or_username">
         <br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password-login" name="password">
         <br>
         <input type="submit" value="Submit">
     </form>
-</body>
+</div>
+
+
+
+<script src="/js/login-signup.js"></script>

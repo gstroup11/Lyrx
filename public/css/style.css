@@ -8,19 +8,24 @@
     --bg: #2F392B;
     --logo: #5CAE53;
     --dlogo: #437e3d;
-
     /* FONT STYLES */
     --ftfam: 'Ubuntu Mono', monospace;
     --ftfam2: 'Bebas Neue', sans-serif;
     --ftfam3: 'Inconsolata', monospace;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
+/* REMOVE HYPERLINK STYLING */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    color: inherit;
+}
 /* SCROLLBAR STYLE */
 ::-webkit-scrollbar {
     width: 5px;
@@ -46,11 +51,9 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 header {
     margin: 0;
 }
-
 .navi {
     display: flex;
     position: sticky;
@@ -60,12 +63,6 @@ header {
     padding-left: 6rem;
     background-color: var(--b);
 }
-
-.logo {
-    margin-right: 1rem; 
-    cursor: pointer;
-}
-
 .directory a {
     padding: 1rem;
     color: var(--ow);
@@ -75,22 +72,22 @@ header {
     text-decoration: none;
     text-align: center;
 }
-
 .directory a:hover {
     color: var(--logo);
 }
-
+.logo {
+    margin-right: 1rem; 
+    cursor: pointer;
+}
+.register {
+    padding: 0 6rem;
+}
 .btn {
     font-family: var(--ftfam);
     margin-right: 1rem;
     font-weight: bold;
     text-decoration: none;
 }
-
-.register {
-    padding: 0 6rem;
-}
-
 .about,
 .services {
     background-color: var(--dlogo);
@@ -98,21 +95,17 @@ header {
     font-family: var(--ftfam3);
     font-weight: 500;
 }
-
 h1 {
     font-size: 4.5rem;
 }
-
 .left {
     margin-top: 2.5rem;
     font-size: 1.5rem;
 }
-
 .right {
     margin-bottom: 2.5rem;
     font-size: 1.5rem;
 }
-
 .searchPage-btn {
     padding: 1rem 5rem;
     background-color: var(--bg);
@@ -122,65 +115,53 @@ h1 {
     border-radius: 4rem;
     text-decoration: none;
 }
-
 .searchPage-btn:hover {
     color: var(--logo);
 }
-
 /* SEARCH PAGE STYLE */
 .search {
     margin-top: 10rem;
     /* min-height: 100vh; */
 }
-
 input {
     line-height: 2.5rem;
 }
-
 ::placeholder {
     padding-left: 0.5rem;
     text-align: left;
 }
-
 #search-btn {
     padding: 0.5rem;
     background-color: var(--ob);
     color: var(--w);
 }
-
 #search-btn:hover {
     color: var(--logo);
 }
-
 /* .filter-form {
     display: flex;
     align-items: center;
 }
-
 .filter-form label {
     padding-right: 3rem;
     padding-left: 0.5rem;
     font-family: var(--ftfam);
     color: var(--w);
 } */
-
 .topSongs {
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
-
 /* RESULT PAGE STYLE */
 .search-top {
     margin-top: -1rem;
     margin-bottom: -3.4rem;
 }
-
 .box {
     background-color: var(--b);
     display: flex;
     position: relative;
 }
-
 .songTitle {
     display: flex;
     flex-direction: column;
@@ -190,22 +171,18 @@ input {
     font-family: var(--ftfam);
     color: var(--w);
 }
-
 h2 {
     padding: 0;
     margin: 0;
     font-size: 3rem;
 }
-
 .artist {
     font-size: 1.5rem;
 }
-
 .songCover {
     width: 100%;
     height: 100%;
 }
-
 .cover {
     height: 340px;
     width: 340px;
@@ -214,12 +191,10 @@ h2 {
     top: 1rem;
     left: 10rem;
 }
-
 /* #player {
     overflow: hidden;
     transition: all .5s ease-in-out;
 }
-
 .player-process {
     height: 6px;
     width: 90%;
@@ -227,18 +202,15 @@ h2 {
     position: relative;
     cursor: pointer;
 }
-
 .controls {
     cursor: pointer;
     font-size: 1rem;
     user-select: none;
     transition: all 0.3 ease-in;
 }
-
 .controls:hover {
     filter: brightness(40%);
 }
-
 .progressbar {
     height: 100%;
     width: 100%;
@@ -246,29 +218,66 @@ h2 {
     border-radius: 2px;
     background-color: var(--logo);
 }
-
 .currentTime, .totalTime {
     color: white;
     font-size: 10px;
     position: absolute;
     margin-top: -2px;
 }
-
 .currentTime {
     left: 7rem;
     top: -0.2rem;
 }
-
 .totalTime {
     right: 7rem;
     top: -0.2rem;
 } */
-
 .lyrics {
     margin-left: 6rem;
     margin-top: 1rem;
 }
-
+/* Contact page */
+.contact-info {
+    background-color: var(--bg);
+    color: var(--ow);
+    font-family: var(--ftfam);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+/* Sign Up Page */
+.signup-form {
+    max-width: 300px; /* Adjust this as needed */
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ow);
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: var(--logo); /* Use your color variables */
+    color: var(--w); /* Use your color variables */
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Login Form */
+.login-form {
+    max-width: 300px; /* Adjust this as needed */
+    margin: 0 auto;
+}
 /* FOOTER STYLE */
 footer {
     background-color: var(--b);
@@ -278,4 +287,48 @@ footer {
     font-family: var(--ftfam3);
     margin-top: auto;
 }
-
+/* MEDIA QUERY for mobile screens */
+@media screen and (max-width: 481px) {
+    .navi {
+        padding-left: 0.5rem;
+    }
+}
+/* MEDIA QUERY for mid screens */
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+    .navi {
+        padding-left: 3rem;
+    }
+    .directory a {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 0.5rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .title-logo {
+        margin-right: 4rem;
+    }
+    .register {
+        padding: 0;
+    }
+    .btn {
+        margin-right: 0.2rem;
+    }
+    .block {
+        width: 481px !important;
+        height: 549px !important;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    .searchPage-btn {
+        padding: 1rem 3rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
