@@ -25,14 +25,20 @@
     </div>
 
     <!-- Account -->
-    <div class="register">
-        <button type="button" class="m-r-3 btn btn-outline-success">
-            <a href="/signup">SIGNUP</a>
-        </button>
-        <button type="button" class="btn btn-success">
-            <a href="/login">LOGIN</a>
-        </button>
-    </div>
+<div class="register">
+    {{#if isLoggedIn}}
+    <button type="button" class="btn btn-success">
+        <a href="/logout">LOGOUT</a>
+    </button>
+    {{else}}
+    <button type="button" class="m-r-3 btn btn-outline-success">
+        <a href="/signup">SIGNUP</a>
+    </button>
+    <button type="button" class="btn btn-success">
+        <a href="/login">LOGIN</a>
+    </button>
+    {{/if}}
+</div>
 </div>
 
 <!-- About Section -->
@@ -64,4 +70,5 @@
 </div>
 
 <script src="/js/mobileMenu.js"></script>
+<script src="/js/logout.js"></script>
 {{!-- <script src="./script.js"></script> --}}
