@@ -1,225 +1,202 @@
+
 :root {
-    /* COLOR PALETTE */
-    --lb: #343231;
-    --ob: #151515;
-    --b: #000;
-    --ow: #e0dedf;
-    --w: #fff;
-    --bg: #2F392B;
-    --logo: #5CAE53;
-    --dlogo: #437e3d;
-
-    /* FONT STYLES */
-    --ftfam: 'Ubuntu Mono', monospace;
-    --ftfam2: 'Bebas Neue', sans-serif;
-    --ftfam3: 'Inconsolata', monospace;
+  /* COLOR PALETTE */
+  --lb: #343231;
+  --ob: #151515;
+  --b: #000;
+  --ow: #e0dedf;
+  --w: #fff;
+  --bg: #2f392b;
+  --logo: #5cae53;
+  --dlogo: #437e3d;
+  /* FONT STYLES */
+  --ftfam: "Ubuntu Mono", monospace;
+  --ftfam2: "Bebas Neue", sans-serif;
+  --ftfam3: "Inconsolata", monospace;
 }
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+/* REMOVE HYPERLINK STYLING */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+}
 /* SCROLLBAR STYLE */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
-  
+
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px var(--lb); 
+  box-shadow: inset 0 0 5px var(--lb);
 }
-   
 ::-webkit-scrollbar-thumb {
-    background: var(--dlogo); 
+  background: var(--dlogo);
 }
-  
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--logo); 
+  background: var(--logo);
 }
-  
 /* BODY STYLE */
 body {
-    margin: 0;
-    background-color: var(--ob);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  background-color: var(--ob);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
 header {
-    margin: 0;
+  margin: 0;
 }
-
 .navi {
-    display: flex;
-    position: sticky;
-    top: calc(0px);
-    z-index: 6;
-    padding: 2.7rem;
-    padding-left: 6rem;
-    background-color: var(--b);
+  display: flex;
+  position: sticky;
+  top: calc(0px);
+  z-index: 6;
+  padding: 2.7rem;
+  padding-left: 6rem;
+  background-color: var(--b);
 }
-
-.logo {
-    margin-right: 1rem; 
-    cursor: pointer;
-}
-
 .directory a {
-    padding: 1rem;
-    color: var(--ow);
-    font-family: var(--ftfam);
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
+  padding: 1rem;
+  color: var(--ow);
+  font-family: var(--ftfam);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
 }
-
 .directory a:hover {
-    color: var(--logo);
+  color: var(--logo);
 }
-
-.btn {
-    font-family: var(--ftfam);
-    margin-right: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+.logo {
+  margin-right: 1rem;
 }
-
 .register {
-    padding: 0 6rem;
+  padding: 0 6rem;
 }
-
+.btn {
+  font-family: var(--ftfam);
+  margin-right: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.block {
+    max-width: 105%;
+    height: auto;
+    display: block;
+}
 .about,
 .services {
-    background-color: var(--dlogo);
-    color: var(--w);
-    font-family: var(--ftfam3);
-    font-weight: 500;
+  background-color: var(--dlogo);
+  color: var(--w);
+  font-family: var(--ftfam3);
+  font-weight: 500;
 }
-
 h1 {
-    font-size: 4.5rem;
+  font-size: 4.5rem;
 }
-
 .left {
-    margin-top: 2.5rem;
-    font-size: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
 }
-
 .right {
-    margin-bottom: 2.5rem;
-    font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
 }
-
 .searchPage-btn {
-    padding: 1rem 5rem;
-    background-color: var(--bg);
-    color: var(--w);
-    font-size: 3rem;
-    border: none;
-    border-radius: 4rem;
-    text-decoration: none;
+  padding: 1rem 5rem;
+  background-color: var(--bg);
+  color: var(--w);
+  font-size: 3rem;
+  border: none;
+  border-radius: 4rem;
+  text-decoration: none;
 }
-
 .searchPage-btn:hover {
-    color: var(--logo);
+  color: var(--logo);
 }
-
 /* SEARCH PAGE STYLE */
 .search {
-    margin-top: 10rem;
-    /* min-height: 100vh; */
+  margin-top: 10rem;
+  /* min-height: 100vh; */
 }
-
 input {
-    line-height: 2.5rem;
+  line-height: 2.5rem;
 }
-
 ::placeholder {
-    padding-left: 0.5rem;
-    text-align: left;
+  padding-left: 0.5rem;
+  text-align: left;
 }
-
 #search-btn {
-    padding: 0.5rem;
-    background-color: var(--ob);
-    color: var(--w);
+  padding: 0.8rem;
+  background-color: var(--dlogo);
+  color: var(--w);
 }
-
 #search-btn:hover {
-    color: var(--logo);
+  color: var(--b);
 }
-
 /* .filter-form {
     display: flex;
     align-items: center;
 }
-
 .filter-form label {
     padding-right: 3rem;
     padding-left: 0.5rem;
     font-family: var(--ftfam);
     color: var(--w);
 } */
-
 .topSongs {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
-
 /* RESULT PAGE STYLE */
 .search-top {
-    margin-top: -1rem;
-    margin-bottom: -3.4rem;
+  margin-top: -1rem;
+  margin-bottom: -3.4rem;
 }
-
 .box {
-    background-color: var(--b);
-    display: flex;
-    position: relative;
+  background-color: var(--b);
+  display: flex;
+  position: relative;
 }
-
 .songTitle {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 5rem;
-    left: 40rem;
-    font-family: var(--ftfam);
-    color: var(--w);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5rem;
+  left: 40rem;
+  font-family: var(--ftfam);
+  color: var(--w);
 }
-
 h2 {
-    padding: 0;
-    margin: 0;
-    font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
 }
-
 .artist {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
-
 .songCover {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 .cover {
-    height: 340px;
-    width: 340px;
-    display: flex;
-    position: relative;
-    top: 1rem;
-    left: 10rem;
+  height: 340px;
+  width: 340px;
+  display: flex;
+  position: relative;
+  top: 1rem;
+  left: 10rem;
 }
-
 /* #player {
     overflow: hidden;
     transition: all .5s ease-in-out;
 }
-
 .player-process {
     height: 6px;
     width: 90%;
@@ -227,18 +204,15 @@ h2 {
     position: relative;
     cursor: pointer;
 }
-
 .controls {
     cursor: pointer;
     font-size: 1rem;
     user-select: none;
     transition: all 0.3 ease-in;
 }
-
 .controls:hover {
     filter: brightness(40%);
 }
-
 .progressbar {
     height: 100%;
     width: 100%;
@@ -246,84 +220,242 @@ h2 {
     border-radius: 2px;
     background-color: var(--logo);
 }
-
 .currentTime, .totalTime {
     color: white;
     font-size: 10px;
     position: absolute;
     margin-top: -2px;
 }
-
 .currentTime {
     left: 7rem;
     top: -0.2rem;
 }
-
 .totalTime {
     right: 7rem;
     top: -0.2rem;
 } */
-
 .lyrics {
-    margin-left: 6rem;
-    margin-top: 1rem;
+  margin-left: 6rem;
+  margin-top: 1rem;
 }
-
 /* Contact page */
 .contact-info {
-    background-color: var(--bg);
-    color: var(--ow);
-    font-family: var(--ftfam);
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
+  background-color: var(--bg);
+  color: var(--ow);
+  font-family: var(--ftfam);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-
 /* Sign Up Page */
-
 .signup-form {
-    max-width: 300px; /* Adjust this as needed */
-    margin: 0 auto;
+  max-width: 300px; /* Adjust this as needed */
+  margin: 0 auto;
 }
-
 label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--ow);
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ow);
 }
-
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 80%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-
 input[type="submit"] {
-    background-color: var(--logo); /* Use your color variables */
-    color: var(--w); /* Use your color variables */
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: var(--logo); /* Use your color variables */
+  color: var(--w); /* Use your color variables */
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
 /* Login Form */
 .login-form {
-    max-width: 300px; /* Adjust this as needed */
-    margin: 0 auto;
+  max-width: 300px; /* Adjust this as needed */
+  margin: 0 auto;
 }
-
 /* FOOTER STYLE */
 footer {
-    background-color: var(--b);
-    color: var(--w);
-    min-height: 20vh;
-    padding-top: 6rem;
-    font-family: var(--ftfam3);
-    margin-top: auto;
+  background-color: var(--b);
+  color: var(--w);
+  min-height: 20vh;
+  padding-top: 6rem;
+  font-family: var(--ftfam3);
+  margin-top: auto;
+}
+/* MEDIA QUERY */
+@media screen and (max-width: 575px) {
+    .navi {
+        padding-left: 1rem;
+        padding-right: 0rem;
+    }
+    .directory a {
+        font-size: 1.5rem;
+    }
+    /* COLLAPSED MENU */
+    .logo {
+        cursor: pointer;
+    }
+    .logo:hover {
+        filter: brightness(150%);
+    }
+    nav.collapsed {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        padding: 1rem;
+        top: 5rem;
+        left: 1rem;
+        background-color: rgba(31, 31, 31, 0.8); 
+    }
+    nav.collapsed a {
+        text-decoration: none;
+        color: var(--w); 
+        opacity: 1; 
+    }
+    .logo:hover + nav.collapsed {
+        display: flex;
+    }
+    .register {
+        padding: 0;
+    }
+    .directory a {
+        padding: 0;
+        position: relative;
+        bottom: 0.5rem;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 1.5rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .navi {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1.5rem;
+    }
+    .directory a {
+        padding: 0.2rem;
+        font-size: 1.5rem;
+    }
+    .register {
+        padding: 0;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 1.5rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .navi {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .directory a {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .title-logo {
+        margin-right: 1rem;
+    }
+    .register {
+        padding: 0;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+        font-size: 2.5rem;
+    }
+    .block {
+        max-width: 108%;
+        height: 100%;
+        display: block;
+    }
+    .right {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 0.5rem;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .navi {
+        padding-left: 3rem;
+        padding-bottom: 3rem;
+    }
+    .directory a {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 1rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .title-logo {
+        margin-right: 4rem;
+    }
+    .register {
+        padding: 0;
+    }
+    .btn {
+        margin-right: 0.2rem;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+        font-size: 3.5rem;
+    }
+    .right {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 0.5rem;
+        padding: 1rem 3rem;
+    }
+    footer {
+        padding-top: 5rem;
+    }
 }
