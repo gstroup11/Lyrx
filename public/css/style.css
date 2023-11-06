@@ -75,7 +75,7 @@ header {
   padding: 1rem;
   color: var(--ow);
   font-family: var(--ftfam);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
@@ -87,7 +87,6 @@ header {
 
 .logo {
   margin-right: 1rem;
-  cursor: pointer;
 }
 
 .register {
@@ -99,6 +98,12 @@ header {
   margin-right: 1rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+.block {
+    max-width: 105%;
+    height: auto;
+    display: block;
 }
 
 .about,
@@ -337,58 +342,184 @@ footer {
   margin-top: auto;
 }
 
-/* MEDIA QUERY for mobile screens */
-@media screen and (max-width: 481px) {
-  .navi {
-    padding-left: 0.5rem;
-  }
+/* MEDIA QUERY */
+@media screen and (max-width: 575px) {
+    .navi {
+        padding-left: 1rem;
+        padding-right: 0rem;
+    }
+    .directory a {
+        font-size: 1.5rem;
+    }
+    .logo {
+        cursor: pointer;
+    }
+    .logo:hover {
+        filter: brightness(150%);
+    }
+    nav.collapsed {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        padding: 1rem 1rem;
+        top: 5rem;
+        left: 1rem;
+        background-color: var(--lb);
+        opacity: 0.5
+    }
+    
+    nav.collapsed a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    /* Additional styles to make the menu visible on hover */
+    .logo:hover + nav.collapsed {
+        display: flex;
+    }
+    .register {
+        padding: 0;
+    }
+    .directory a {
+        padding: 0;
+        position: relative;
+        bottom: 0.5rem;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 1.5rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
 }
 
-/* MEDIA QUERY for mid screens */
-@media screen and (min-width: 768px) and (max-width: 1025px) {
-  .navi {
-    padding-left: 3rem;
-  }
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .navi {
+        display: flex;
+        flex-direction: row;
+        padding-left: 1.5rem;
+    }
+    .directory a {
+        padding: 0.2rem;
+        font-size: 1.5rem;
+    }
+    .register {
+        padding: 0;
+    }
+    .directory a {
+        padding: 0;
+        position: relative;
+        bottom: 0.5rem;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 1.5rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
 
-  .directory a {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    position: relative;
-    bottom: 0.5rem;
-  }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .navi {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .directory a {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .title-logo {
+        margin-right: 1rem;
+    }
+    .register {
+        padding: 0;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+        font-size: 2.5rem;
+    }
+    .block {
+        max-width: 108%;
+        height: 100%;
+        display: block;
+    }
+    .right {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 0.5rem;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
+}
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-  }
-  
-  .title-logo {
-    margin-right: 4rem;
-  }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .navi {
+        padding-left: 3rem;
+        padding-bottom: 1rem;
+    }
+    .directory a {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 1rem;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
 
-  .register {
-    padding: 0;
-  }
-
-  .btn {
-    margin-right: 0.2rem;
-  }
-
-  .block {
-    width: 481px !important;
-    height: 549px !important;
-  }
-
-  h1 {
-    font-size: 3.5rem;
-  }
-
-  .searchPage-btn {
-    padding: 1rem 3rem;
-  }
-
-  footer {
-    padding-top: 4rem;
-  }
+    .title-logo {
+        margin-right: 4rem;
+    }
+    .register {
+        padding: 0;
+    }
+    .btn {
+        margin-right: 0.2rem;
+    }
+    h1 {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+        font-size: 3.5rem;
+    }
+    .right {
+        display: flex;
+        position: relative;
+        top: 1.5rem;
+    }
+    .searchPage-btn {
+        display: flex;
+        position: relative;
+        bottom: 0.5rem;
+        padding: 1rem 3rem;
+    }
+    footer {
+        padding-top: 4rem;
+    }
 }
