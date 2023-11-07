@@ -265,7 +265,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 150%;
+  width: 180%;
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -367,6 +367,14 @@ footer {
       top: 1rem;
       margin-left: 1rem;
     }
+    .unique-login-form {
+      width: 80%;
+      margin-left: -4rem;
+    }
+    .signup-form {
+      width: 80%;
+      margin-left: 1rem;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
     .navi {
@@ -411,6 +419,14 @@ footer {
       width: 230px;
       top: 1rem;
       margin-left: 3rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 2.5rem;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -471,6 +487,14 @@ footer {
       width: 270px;
       top: 1rem;
       margin-left: 3rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 7rem;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -535,5 +559,13 @@ footer {
       width: 300px;
       top: 1rem;
       margin-left: 6rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 10rem;
     }
 }
