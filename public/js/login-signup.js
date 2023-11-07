@@ -1,20 +1,20 @@
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email_or_username').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector("#email_or_username").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
 
   if (email && password) {
-    const response = await fetch('/api/user/login', {
-      method: 'POST',
+    const response = await fetch("/api/user/login", {
+      method: "POST",
       body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace("/");
     } else {
-      alert('Failed to log in.');
+      alert("Incorrect email or password. Please try again!");
     }
   }
 };
@@ -22,35 +22,40 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector("#username-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
 
   if (username && email && password) {
-    const response = await fetch('/api/user/signup', {
-      method: 'POST',
+    if (password.length !== 8) {
+      alert("Password must be at least 8 characters long");
+      return; // Stop further execution
+    }
+
+    const response = await fetch("/api/user/signup", {
+      method: "POST",
       body: JSON.stringify({ username, email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace("/");
     } else {
-      alert('Failed to sign up.');
+      alert("duplicate email or username. Please try again!");
     }
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const loginForm = document.querySelector('.unique-login-form');
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.querySelector(".unique-login-form");
   if (loginForm) {
-    loginForm.addEventListener('submit', loginFormHandler);
+    loginForm.addEventListener("submit", loginFormHandler);
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const signupForm = document.querySelector('.signup-form form');
+document.addEventListener("DOMContentLoaded", () => {
+  const signupForm = document.querySelector(".signup-form form");
   if (signupForm) {
-    signupForm.addEventListener('submit', signupFormHandler);
+    signupForm.addEventListener("submit", signupFormHandler);
   }
 });
