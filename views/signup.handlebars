@@ -1,52 +1,64 @@
 <!-- Navigation Bar -->
 <div class="d-flex justify-content-between navi">
-    <div class="directory d-flex">
+  <div class="directory d-flex">
 
-        <!-- Logo -->
-        <div class="logo">
-            <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
-        </div>
-
-        <nav>
-            <!-- Homepage -->
-            <a href="/home"> HOME </a>
-
-            <!-- About -->
-            {{!-- <a href="#about"> ABOUT </a> --}}
-
-            <!-- Contact Information -->
-            <a href="/contact"> CONTACT </a>
-        </nav>
+    <!-- Logo -->
+    <div class="logo">
+      <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
     </div>
 
-    <!-- Title Logo -->
-    <div class="title-logo">
-        <img width="90" height="30" src="/images/lyrx-logo-bold.png" alt="Lyrx title logo" />
-    </div>
+    <nav>
+      <!-- Homepage -->
+      <a href="/home"> HOME </a>
 
-    <!-- Account -->
-    <div class="register">
-        <button type="button" class="btn btn-success">
-            <a href="/login">LOGIN</a>
-        </button>
-    </div>
+      <!-- About -->
+      {{! <a href="#about"> ABOUT </a> }}
+
+      <!-- Contact Information -->
+      <a href="/contact"> CONTACT </a>
+    </nav>
+  </div>
+
+  <!-- Title Logo -->
+  <div class="title-logo">
+    <img
+      width="90"
+      height="30"
+      src="/images/lyrx-logo-bold.png"
+      alt="Lyrx title logo"
+    />
+  </div>
+
+  <!-- Account -->
+  <div class="register">
+    {{#if isLoggedIn}}
+      <button type="button" class="btn btn-success">
+        <a href="/logout">LOGOUT</a>
+      </button>
+    {{else}}
+      <button type="button" class="m-r-3 btn btn-outline-success">
+        <a href="/signup">SIGNUP</a>
+      </button>
+    {{/if}}
+  </div>
 </div>
 
 <h1>{{pageTitle}}</h1>
 <div class="signup-form">
-    <form class="signup-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username-signup" name="username"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email-signup" name="email"><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password-signup" name="password"><br><br>
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+  <form class="signup-form">
+    <label for="username">Username:</label>
+    <input type="text" id="username-signup" name="username" /><br /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email-signup" name="email" /><br /><br />
+    <label for="password">Password:</label>
+    <input type="password" id="password-signup" name="password" /><br /><br />
+    <label for="confirm_password">Confirm Password:</label>
+    <input type="password" id="confirm_password" name="confirm_password" /><br
+    /><br />
+    <input type="submit" value="Submit" />
+  </form>
 </div>
 
 <script src="/js/login-signup.js"></script>
 <script src="/js/mobileMenu.js"></script>
-
+<script src="/js/login.js"></script>

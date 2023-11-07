@@ -1,42 +1,54 @@
 <!-- Navigation Bar -->
 <div class="d-flex justify-content-between navi">
-    <div class="directory d-flex">
+  <div class="directory d-flex">
 
-        <!-- Logo -->
-        <div class="logo">
-            <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
-        </div>
-
-        <nav>
-            <!-- Homepage -->
-            <a href="/home"> HOME </a>
-
-            <!-- About -->
-            {{!-- <a href="#about"> ABOUT </a> --}}
-
-            <!-- Contact Information -->
-            <a href="/contact"> CONTACT </a>
-        </nav>
+    <!-- Logo -->
+    <div class="logo">
+      <img width="35" height="35" src="/images/lyrx-bold.png" alt="Lyrx logo" />
     </div>
-    
-    <!-- Account -->
-    <div class="register">
-        <button type="button" class="m-r-3 btn btn-outline-success">
-            <a href="/signup">SIGNUP</a>
-        </button>
-        <button type="button" class="btn btn-success">
-            <a href="/login">LOGIN</a>
-        </button>
-    </div>
+
+    <nav>
+      <!-- Homepage -->
+      <a href="/home"> HOME </a>
+
+      <!-- About -->
+      {{! <a href="#about"> ABOUT </a> }}
+
+      <!-- Contact Information -->
+      <a href="/contact"> CONTACT </a>
+    </nav>
+  </div>
+
+  <!-- Account -->
+  <div class="register">
+    {{#if isLoggedIn}}
+      <button type="button" class="btn btn-success">
+        <a href="/logout">LOGOUT</a>
+      </button>
+    {{else}}
+      <button type="button" class="m-r-3 btn btn-outline-success">
+        <a href="/signup">SIGNUP</a>
+      </button>
+      <button type="button" class="btn btn-success">
+        <a href="/login">LOGIN</a>
+      </button>
+    {{/if}}
+  </div>
 </div>
 
 <!-- Search Section -->
 <div class="pt-3 align-items-center justify-content-center text-center search">
   <form id="search-form">
-    <input id="search-input" size="150px" placeholder="Artist - Song ">
+    <input
+     
+      id="search-input"
+      size="150px"
+      placeholder="Artist - Song "
+    />
     <button type="submit" id="search-btn"><i class="fas fa-search"></i></button>
   </form>
 </div>
 
-<script src="/js/searchFunction.js"></script> 
+<script src="/js/searchFunction.js"></script>
 <script src="/js/mobileMenu.js"></script>
+<script src="/js/login.js"></script>

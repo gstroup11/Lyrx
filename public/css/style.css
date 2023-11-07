@@ -168,8 +168,8 @@ input {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -8rem;
-  left: 40rem;
+  margin-top: -8rem; 
+  margin-left: 40rem; 
   font-family: var(--ftfam);
   color: var(--w);
 }
@@ -195,7 +195,7 @@ h2 {
   display: flex;
   position: relative;
   top: 1rem;
-  left: 15rem;
+  margin-left: 15rem;
 }
 /* #player {
     overflow: hidden;

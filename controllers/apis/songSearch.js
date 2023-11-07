@@ -21,8 +21,12 @@ router.get("/result", withAuth, async (req, res) => {
 
     if (Array.isArray(results) && results.length > 0) {
       const firstResult = results[0];
+
+      // Check if the user is logged in
+      const isLoggedIn = req.session.loggedIn || false;
+
       // Render the 'results' Handlebars template and pass the first result
-      res.render("result", { firstResult });
+      res.render("result", { isLoggedIn, firstResult });
     } else {
       // Render the 'results' Handlebars template with no results found
       res.render("result", { firstResult: null });

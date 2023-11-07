@@ -1,5 +1,5 @@
-const logo = document.querySelector('.logo');
-const menu = document.querySelector('nav');
+const logo = document.querySelectorAll('.logo');
+const menu = document.querySelectorAll('nav');
 let menuIsOpen = false; // Maintain a variable to track the menu state
 
 // Close the menu when clicking outside of it
