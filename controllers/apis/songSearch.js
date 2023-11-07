@@ -29,7 +29,7 @@ router.get("/result", withAuth, async (req, res) => {
       res.render("result", { isLoggedIn, firstResult });
     } else {
       // Render the 'results' Handlebars template with no results found
-      res.render("result", { firstResult: null });
+      res.render("result", { isLoggedIn, firstResult: null });
     }
   } catch (error) {
     // Render the 'results' Handlebars template with an error message
