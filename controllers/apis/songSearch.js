@@ -29,11 +29,14 @@ router.get("/result", withAuth, async (req, res) => {
       res.render("result", { isLoggedIn, firstResult });
     } else {
       // Render the 'results' Handlebars template with no results found
-      res.render("result", { firstResult: null });
+      res.render("result", { isLoggedIn, firstResult: null });
     }
-  } catch (error) {
+  }  catch (error) {
+    // Check if the user is logged in
+    const isLoggedIn = req.session.loggedIn || false;
+
     // Render the 'results' Handlebars template with an error message
-    res.render("result", { error: "Error searching lyrics" });
+    res.render("search", { isLoggedIn, error: "Error searching lyrics" });
   }
 });
 
