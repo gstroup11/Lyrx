@@ -133,7 +133,7 @@ input {
   text-align: left;
 }
 #search-btn {
-  padding: 0.8rem;
+  padding: 0.5rem;
   background-color: var(--dlogo);
   color: var(--w);
 }
@@ -168,10 +168,14 @@ input {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 5rem;
-  left: 40rem;
+  margin-top: -8rem; 
+  margin-left: 40rem; 
   font-family: var(--ftfam);
   color: var(--w);
+}
+#term-placeholder {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 h2 {
   padding: 0;
@@ -191,7 +195,7 @@ h2 {
   display: flex;
   position: relative;
   top: 1rem;
-  left: 10rem;
+  margin-left: 15rem;
 }
 /* #player {
     overflow: hidden;
@@ -261,7 +265,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 80%;
+  width: 180%;
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -289,6 +293,7 @@ footer {
   font-family: var(--ftfam3);
   margin-top: auto;
 }
+
 /* MEDIA QUERY */
 @media screen and (max-width: 575px) {
     .navi {
@@ -305,7 +310,7 @@ footer {
     .logo:hover {
         filter: brightness(150%);
     }
-    nav.collapsed {
+    nav.collasped {
         display: none; 
         flex-direction: column;
         position: absolute;
@@ -314,16 +319,19 @@ footer {
         left: 1rem;
         background-color: rgba(31, 31, 31, 0.8); 
     }
-    nav.collapsed a {
+    nav.collasped a {
         text-decoration: none;
         color: var(--w); 
         opacity: 1; 
     }
-    .logo:hover + nav.collapsed {
+    .logo:hover + nav.collasped {
         display: flex;
     }
     .register {
+      display: flex;
+        flex-direction: row;
         padding: 0;
+        margin-right: 0;
     }
     .directory a {
         padding: 0;
@@ -343,6 +351,30 @@ footer {
     footer {
         padding-top: 4rem;
     }
+    #search-input {
+      width: 70%;
+    }
+    #search-btn {
+      padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 15rem; 
+    }
+    .cover {
+      height: 190px;
+      width: 190px;
+      top: 1rem;
+      margin-left: 1rem;
+    }
+    .unique-login-form {
+      width: 80%;
+      margin-left: -4rem;
+    }
+    .signup-form {
+      width: 80%;
+      margin-left: 1rem;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
     .navi {
@@ -355,6 +387,8 @@ footer {
         font-size: 1.5rem;
     }
     .register {
+      display: flex;
+        flex-direction: row;
         padding: 0;
     }
     h1 {
@@ -370,6 +404,30 @@ footer {
     footer {
         padding-top: 4rem;
     }
+    #search-input {
+      width: 70%;
+    }
+    #search-btn {
+      padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 20rem; 
+    }
+    .cover {
+      height: 230px;
+      width: 230px;
+      top: 1rem;
+      margin-left: 3rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 2.5rem;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .navi {
@@ -384,6 +442,8 @@ footer {
         margin-right: 1rem;
     }
     .register {
+      display: flex;
+        flex-direction: row;
         padding: 0;
     }
     h1 {
@@ -412,6 +472,30 @@ footer {
     footer {
         padding-top: 4rem;
     }
+    #search-input {
+      width: 60%;
+    }
+    #search-btn {
+      padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 22rem; 
+    }
+    .cover {
+      height: 270px;
+      width: 270px;
+      top: 1rem;
+      margin-left: 3rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 7rem;
+    }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
     .navi {
@@ -433,7 +517,9 @@ footer {
         margin-right: 4rem;
     }
     .register {
-        padding: 0;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
     }
     .btn {
         margin-right: 0.2rem;
@@ -457,5 +543,29 @@ footer {
     }
     footer {
         padding-top: 5rem;
+    }
+    #search-input {
+      width: 70%;
+    }
+    #search-btn {
+      padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 30rem; 
+    }
+    .cover {
+      height: 300px;
+      width: 300px;
+      top: 1rem;
+      margin-left: 6rem;
+    }
+    .unique-login-form {
+      width: 100%;
+      margin-left: -7rem;
+    }
+    .signup-form {
+      width: 100%;
+      margin-left: 10rem;
     }
 }
