@@ -310,7 +310,7 @@ footer {
     .logo:hover {
         filter: brightness(150%);
     }
-    nav.collapsed {
+    nav.collasped {
         display: none; 
         flex-direction: column;
         position: absolute;
@@ -319,12 +319,12 @@ footer {
         left: 1rem;
         background-color: rgba(31, 31, 31, 0.8); 
     }
-    nav.collapsed a {
+    nav.collasped a {
         text-decoration: none;
         color: var(--w); 
         opacity: 1; 
     }
-    .logo:hover + nav.collapsed {
+    .logo:hover + nav.collasped {
         display: flex;
     }
     .register {
@@ -356,6 +356,16 @@ footer {
     }
     #search-btn {
       padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 15rem; 
+    }
+    .cover {
+      height: 190px;
+      width: 190px;
+      top: 1rem;
+      margin-left: 1rem;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -391,6 +401,16 @@ footer {
     }
     #search-btn {
       padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 20rem; 
+    }
+    .cover {
+      height: 230px;
+      width: 230px;
+      top: 1rem;
+      margin-left: 3rem;
     }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -441,6 +461,16 @@ footer {
     }
     #search-btn {
       padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 22rem; 
+    }
+    .cover {
+      height: 270px;
+      width: 270px;
+      top: 1rem;
+      margin-left: 3rem;
     }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -495,5 +525,15 @@ footer {
     }
     #search-btn {
       padding: 0.5rem;
+    }
+    .songTitle {
+      margin-top: -8rem; 
+      margin-left: 30rem; 
+    }
+    .cover {
+      height: 300px;
+      width: 300px;
+      top: 1rem;
+      margin-left: 6rem;
     }
 }
