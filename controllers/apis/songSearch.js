@@ -33,7 +33,7 @@ router.get("/result", withAuth, async (req, res) => {
     }
   } catch (error) {
     // Render the 'results' Handlebars template with an error message
-    res.render("result", { error: "Error searching lyrics" });
+    res.render("search", { error: "Error searching lyrics" });
   }
 });
 
